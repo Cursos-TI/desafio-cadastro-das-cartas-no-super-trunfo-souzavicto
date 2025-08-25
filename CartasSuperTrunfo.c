@@ -1,18 +1,6 @@
 // Desafio Super Trunfo - Países
-// Tema 1 - Cadastro das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
-// Siga os comentários para implementar cada parte do desafio.
+// Tema 1 - Cadastro das Cartas - nivel mestre
 
-    // Sugestão: Defina variáveis separadas para cada atributo da cidade.
-    // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
-    
-    // Cadastro das Cartas:
-    // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
-    // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
-    
-    // Exibição dos Dados das Cartas:
-    // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
-    // Exiba os valores inseridos para cada atributo da cidade, um por linha.
 
 #include <stdio.h>
 
@@ -22,12 +10,11 @@ int main (){
     letra_estado2[1], codigo[4],codigo2[4], cidade[50],cidade2[50];
     int populacao,populacao2,turistico,turistico2,resultado;
     float area,area2,densidade,pib_per_capita,densidade2,pib_per_capita2,super_poder,super_poder2;
-    double pib,pib2;
+    double pib,pib2;//pib alterado de float para double para suportar o numero digitado
 
 //coletando informações da primeira carta 
     printf("Bem vindo ao super trunfo! \n");
     printf("digite os dados da primeira carta\n");
-    printf("digite os dados da segunda carta\n");
     printf("Digite o nome do estado: ");
     scanf("%s", &nome_estado);
     printf("Digite a letra do estado de A até H: ");
@@ -50,7 +37,7 @@ int main (){
     pib_per_capita = (float) pib / populacao;//fazendo o calculo do pib per capita
 
     // calculando o super poder da carta 1
-    super_poder = populacao + area + pib + turistico + pib_per_capita + (1.0 / densidade);
+    super_poder = (float)populacao + area + pib + turistico + pib_per_capita + (1.0 / densidade);
 
 
     //mostrando informaçõe da primeira carta
@@ -65,6 +52,7 @@ int main (){
     printf("Numero de pontos turisticos: %d\n",turistico);
     printf("Densidade Populacional: %.2f \n", densidade);
     printf("PIB per Capita: %.2f reais\n",pib_per_capita);
+    printf("Super Poder: %.2f\n",super_poder);
 
 
     // coletando iformações da segunda carta
@@ -91,7 +79,7 @@ int main (){
     pib_per_capita2 = (float) pib2 / populacao2;//fazendo o calculo do pib per capita
 
     //calculando o super poder da carta 2
-    super_poder2 = populacao2 + area2 + pib2 + turistico2 + pib_per_capita2 + (1.0 / densidade2);
+    super_poder2 = (float) populacao2 + area2 + pib2 + turistico2 + pib_per_capita2 + (1.0 / densidade2);
 
 
     // mostrando os dados digitados pelo usario da segunda carta
@@ -104,7 +92,8 @@ int main (){
     printf("Área: %.2f km²\n", area2);
     printf("PIB: R$%.2f de reais\n",pib2);
     printf("Numero de pontos turisticos: %d\n",turistico2);
-
+    printf("Super Poder: %.2f\n",super_poder2);
+    
     // fazendo a comparação de cartas para ver qual carta ganhou
     printf("Comparação de Cartas: \n");
     resultado = populacao > populacao2;    
