@@ -2,8 +2,8 @@
 
 int main (){
     
-    char nome_estado[50],nome_estado2[50],letra_estado[1],
-    letra_estado2[1], codigo[4],codigo2[4], cidade[50],cidade2[50];
+    char nome_estado[50],nome_estado2[50],letra_estado[3],
+    letra_estado2[3], codigo[4],codigo2[4], cidade[50],cidade2[50];
     int populacao,populacao2,turistico,turistico2,resultado;
     float area,area2,densidade,pib_per_capita,densidade2,pib_per_capita2;
     double pib,pib2;//pib alterado de float para double para suportar o numero digitado
@@ -12,13 +12,13 @@ int main (){
     printf("Bem vindo ao super trunfo! \n");
     printf("digite os dados da primeira carta\n");
     printf("Digite o nome do estado: ");
-    scanf("%s", &nome_estado);
+    scanf("%s", nome_estado);
     printf("Digite a letra do estado de A até H: ");
-    scanf("%s",&letra_estado);
+    scanf("%s",letra_estado);
     printf("Digite o codigo do estado ex: A01 até 04: ");
-    scanf("%s",&codigo);    
+    scanf("%s",codigo);    
     printf("Digite o  nome da cidade: ");
-    scanf("%s",&cidade);
+    scanf("%s",cidade);
     printf("Digite a população da cidade: ");
     scanf("%d",&populacao);
     printf("Digite a área quadara da cidade: ");
@@ -40,9 +40,9 @@ int main (){
     printf("Letra estado: %s\n", letra_estado);
     printf("Codigo do estado %s\n",codigo);
     printf("Nome da cidade: %s \n",cidade);
-    printf("População: %.2d\n", populacao);
+    printf("População: %.d\n", populacao);
     printf("Área: %.2f km²\n", area);
-    printf("PIB: R$%.2f de reais\n",pib);
+    printf("PIB: R$%.2lf de reais\n",pib);
     printf("Numero de pontos turisticos: %d\n",turistico);
     printf("Densidade Populacional: %.2f \n", densidade);
     printf("PIB per Capita: %.2f reais\n",pib_per_capita);
@@ -52,13 +52,13 @@ int main (){
     // coletando iformações da segunda carta
     printf("digite os dados da segunda carta\n");
     printf("Digite o nome do estado: ");
-    scanf("%s", &nome_estado2);
+    scanf("%s", nome_estado2);
     printf("Digite a letra do estado de A até H: ");
-    scanf("%s",&letra_estado2);
+    scanf("%s",letra_estado2);
     printf("Digite o codigo do estado ex: A01 até 04: ");
-    scanf("%s",&codigo2);    
+    scanf("%s",codigo2);    
     printf("Digite o nome da cidade: ");
-    scanf("%s",&cidade2);
+    scanf("%s",cidade2);
     printf("Digite a população da cidade: ");
     scanf("%d",&populacao2);
     printf("Digite a área quadara da ciade: ");
@@ -82,7 +82,7 @@ int main (){
     printf("Nome da cidade: %s \n",cidade2);
     printf("População: %.2d\n", populacao2);
     printf("Área: %.2f km²\n", area2);
-    printf("PIB: R$%.2f de reais\n",pib2);
+    printf("PIB: R$%.2lf de reais\n",pib2);
     printf("Numero de pontos turisticos: %d\n",turistico2);
 
 
